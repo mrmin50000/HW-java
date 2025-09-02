@@ -21,6 +21,8 @@ public class Car {
 	public Car(String model, String color) {
 		this.model = model;
 		this.color = color;
+		this.year = 11;
+		this.license = "011100";
 	}
 
 	public void To_String() {
@@ -67,13 +69,20 @@ public class Car {
 	}
 
 	public static void main(String[] args) {
-		Car C = new Car();
-		C.To_String();
-		C.SetModel("merc");
+		Car C1 = new Car();
+		C1.To_String();
 		System.out.print("\n");
-		C.To_String();
+		Car C2 = new Car("yo", "yo", "yo", 12);
+		C2.To_String();
 		System.out.print("\n");
-		System.out.println("Age: " + C.ReturnAge());
+		Car C3 = new Car("mod", "white");
+		C3.To_String();
+		System.out.print("\n");
+		C1.SetModel("merc");
+		System.out.print("\n");
+		C1.To_String();
+		System.out.print("\n" + C1.GetColor() + "\n");
+		System.out.println("Age: " + C1.ReturnAge());
 	}
 
 }
