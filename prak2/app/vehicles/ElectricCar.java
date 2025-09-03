@@ -21,4 +21,10 @@ public class ElectricCar extends Car {
 	public String vehicleType() {
 		return "ElectricCar";
 	}
+
+	@Override
+	public void ToString() {
+		super.ToString();
+		System.out.println("Battery Capacity: " + batteryCapacity);
+	}
 }
