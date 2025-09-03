@@ -1,0 +1,24 @@
+package prak2.app.vehicles;
+
+public class ElectricCar extends Car {
+	private int batteryCapacity;
+
+	public ElectricCar() {
+		super();
+		batteryCapacity = 100;
+		this.engineType = "Electro";
+	}
+
+	public void SetBatteryCapacity(int batteryCapacity) {
+		this.batteryCapacity = batteryCapacity;
+	}
+
+	public int GetBatteryCapacity() {
+		return this.batteryCapacity;
+	}
+
+	@Override
+	public String vehicleType() {
+		return "ElectricCar";
+	}
+}
