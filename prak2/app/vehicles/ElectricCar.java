@@ -1,6 +1,6 @@
 package prak2.app.vehicles;
 
-public class ElectricCar extends Car {
+public class ElectricCar extends Car implements ElectricVehicle {
 	private int batteryCapacity;
 
 	public ElectricCar() {

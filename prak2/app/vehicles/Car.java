@@ -12,7 +12,7 @@ public class Car extends Vehicle {
 		insuranceNumber = 123;
 		ownerName = "Sam";
 		license = "00000";
-		engineType = "Fuel";
+		engineType = "Combustion";
 		year = 1999;
 	}
 }
