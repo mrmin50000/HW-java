@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("Введите 3 стороны треугольника, цвет и есть заливка или нет (1 - есть, 0 - нет)\n");
+		System.out.println(
+				"Введите 3 стороны треугольника, цвет и есть заливка или нет (true - есть, false - нет)\n");
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("сторона 1: ");
 		double side1 = scanner.nextDouble();
@@ -20,6 +21,7 @@ public class Main {
 		Triangle t2 = new Triangle();
 		System.out.println('\n' + t1.ToString() + '\n');
 		System.out.println(t2.ToString());
+		scanner.close();
 	}
 
 }
