@@ -1,7 +1,12 @@
 package prak4;
 
 public class Triangle extends GeometricObject {
-	public Triangle(double side1, double side2, double side3, String color, boolean isFilled) {
+
+	public Triangle(double side1, double side2, double side3, String color, boolean isFilled)
+			throws IllegalTriangleException {
+		if (!isValidTriangle(side1, side2, side3)) {
+			throw new IllegalTriangleException(side1, side2, side3);
+		}
 		this.side1 = side1;
 		this.side2 = side2;
 		this.side3 = side3;
@@ -17,4 +22,7 @@ public class Triangle extends GeometricObject {
 		this.isFilled = true;
 	}
 
+	private boolean isValidTriangle(double a, double b, double c) {
+		return a + b > c && a + c > b && b + c > a;
+	}
 }

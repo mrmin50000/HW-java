@@ -17,9 +17,13 @@ public class Main {
 		String color = scanner.next();
 		System.out.println("заливка: ");
 		boolean isFilled = scanner.nextBoolean();
-		Triangle t1 = new Triangle(side1, side2, side3, color, isFilled);
+		try {
+			Triangle t1 = new Triangle(side1, side2, side3, color, isFilled);
+			System.out.println('\n' + t1.ToString() + '\n');
+		} catch (IllegalTriangleException e) {
+			System.out.println(e);
+		}
 		Triangle t2 = new Triangle();
-		System.out.println('\n' + t1.ToString() + '\n');
 		System.out.println(t2.ToString());
 		scanner.close();
 	}
