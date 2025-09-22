@@ -26,6 +26,10 @@ public abstract class GeometricObject {
 		}
 	}
 
+	public interface Colorable {
+		public void howToColor();
+	}
+
 	public interface Comparable {
 		public GeometricObject compareto(GeometricObject obj);
 	};

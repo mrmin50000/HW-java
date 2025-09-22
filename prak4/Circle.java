@@ -1,6 +1,6 @@
 package prak4;
 
-public class Circle extends GeometricObject {
+public class Circle extends GeometricObject implements GeometricObject.Colorable {
 	private double radius;
 
 	public Circle(double radius, boolean isFilled, String color) {
@@ -13,6 +13,11 @@ public class Circle extends GeometricObject {
 		this.radius = 1;
 		this.isFilled = true;
 		this.color = "red";
+	}
+
+	@Override
+	public void howToColor() {
+		System.out.println("Раскрасьте окружность\n");
 	}
 
 	@Override

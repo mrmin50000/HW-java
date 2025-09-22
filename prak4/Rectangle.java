@@ -1,6 +1,6 @@
 package prak4;
 
-public class Rectangle extends GeometricObject {
+public class Rectangle extends GeometricObject implements GeometricObject.Colorable {
 
 	private double side1;
 	private double side2;
@@ -17,6 +17,11 @@ public class Rectangle extends GeometricObject {
 		this.side2 = 1.0;
 		this.color = "red";
 		this.isFilled = true;
+	}
+
+	@Override
+	public void howToColor() {
+		System.out.println("Раскрасьте все 4 стороны\n");
 	}
 
 	@Override

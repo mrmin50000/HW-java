@@ -1,6 +1,6 @@
 package prak4;
 
-public class ComparableCircle extends Circle implements GeometricObject.Comparable {
+public class ComparableCircle extends Circle implements GeometricObject.Comparable, GeometricObject.Colorable {
 
 	public ComparableCircle(double r, boolean a, String color) {
 		super(r, a, color);
@@ -12,6 +12,11 @@ public class ComparableCircle extends Circle implements GeometricObject.Comparab
 
 	public String ToString() {
 		return super.ToString();
+	}
+
+	@Override
+	public void howToColor() {
+		super.howToColor();
 	}
 
 	@Override

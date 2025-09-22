@@ -2,6 +2,8 @@ package prak4;
 
 import java.util.Scanner;
 
+import prak4.GeometricObject.Colorable;
+
 public class Main {
 	public static void main(String[] args) {
 		System.out.println(
@@ -82,6 +84,22 @@ public class Main {
 		Rectangle RR = new Rectangle(3, 4, "sadasda", false);
 
 		System.out.println(CC3.compareto(RR).ToString() + "\n");
+
+		/* Third part */
+
+		GeometricObject[] arr = { new Circle(), new Rectangle(), new Square(), new Triangle(),
+				new ComparableCircle() };
+
+		for (int i = 0; i < 5; i++) {
+
+			if (arr[i] instanceof Colorable) {
+				Colorable colorable = (Colorable) arr[i];
+				colorable.howToColor();
+				System.out.println("\nS = " + arr[i].getArea());
+			} else {
+				System.out.println("howToColor: Not colorable");
+			}
+		}
 
 		scanner.close();
 	}

@@ -1,6 +1,6 @@
 package prak4;
 
-public class Triangle extends GeometricObject {
+public class Triangle extends GeometricObject implements GeometricObject.Colorable {
 
 	private double side1;
 	private double side2;
@@ -24,6 +24,11 @@ public class Triangle extends GeometricObject {
 		this.side3 = 1.0;
 		this.color = "red";
 		this.isFilled = true;
+	}
+
+	@Override
+	public void howToColor() {
+		System.out.println("Раскрасьте все 3 стороны\n");
 	}
 
 	@Override
