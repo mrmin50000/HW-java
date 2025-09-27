@@ -1,0 +1,30 @@
+@startuml
+title UML Diagram: GenericStack Inheritance from ArrayList
+
+class ArrayList<E> {
+  +add(element: E): boolean
+  +remove(index: int): E
+  +get(index: int): E
+  +size(): int
+  +isEmpty(): boolean
+  +clear(): void
+}
+
+class GenericStack<E> {
+  +peek(): E
+  +push(o: E): void
+  +pop(): E
+  +getSize(): int
+  +isEmpty(): boolean
+  +toString(): String
+}
+
+ArrayList <|-- GenericStack
+
+note top of GenericStack
+  Inherits from ArrayList<E>
+  Implements stack operations
+  using ArrayList methods
+end note
+
+@enduml
