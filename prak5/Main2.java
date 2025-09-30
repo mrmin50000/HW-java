@@ -3,7 +3,7 @@ package prak5;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class GenericStack<E> {
+class GenericStack<E> {
 	private static final int DEFAULT_CAPACITY = 10;
 	private E[] elements;
 	private int size;
@@ -80,7 +80,7 @@ public class GenericStack<E> {
 
 }
 
-public class MyStack<E> {
+class MyStack<E> {
 	private java.util.ArrayList<E> list = new java.util.ArrayList<>();
 
 	public int getSize() {
@@ -111,7 +111,7 @@ public class MyStack<E> {
 	}
 }
 
-public class GenericStackExtendsByArrayList<E> extends ArrayList<E> {
+class GenericStackExtendsByArrayList<E> extends ArrayList<E> {
 
 	public E peek() {
 		if (isEmpty()) {
